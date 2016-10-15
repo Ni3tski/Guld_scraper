@@ -6,12 +6,12 @@
 // require 'scraperwiki/simple_html_dom.php';
 //
 // // Read in a page
-// $html = scraperwiki::scrape("http://foo.com");
+$html = scraperwiki::scrape("https://nocks.co/api/market?call=nlg");
 //
 // // Find something on the page using css selectors
-// $dom = new simple_html_dom();
-// $dom->load($html);
-// print_r($dom->find("table.list"));
+ $dom = new simple_html_dom();
+ $dom->load($html);
+ print_r($dom->find("table.list"));
 //
 // // Write out to the sqlite database using scraperwiki library
 // scraperwiki::save_sqlite(array('name'), array('name' => 'susan', 'occupation' => 'software developer'));
@@ -24,4 +24,6 @@
 // All that matters is that your final data is written to an SQLite database
 // called "data.sqlite" in the current working directory which has at least a table
 // called "data".
+
+
 ?>
